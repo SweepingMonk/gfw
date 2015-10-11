@@ -11,6 +11,9 @@ def get_gfw_list():
     gfw_list = urllib2.urlopen(GFW_LIST_LINK).read()
     gfw_list = base64.standard_b64decode(gfw_list)
 
+    with open("gfwlist.txt") as fp:
+        gfw_list += fp.read()
+
     return cStringIO.StringIO(gfw_list)
 
 
