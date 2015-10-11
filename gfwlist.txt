@@ -1,1 +1,6 @@
 ||google.com
+||google.co.jp
+||google.com.sg
+||google.com.hk
+||blogspot.com
+||blogspot.jp

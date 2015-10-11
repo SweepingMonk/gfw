@@ -24,7 +24,7 @@ def generate_dnsmasq_conf(gfw_list, file_name="gfw.conf",
 
     with open("gfw.conf", "w") as output:
         for line in gfw_list:
-            line = line.strip("\n")
+            line = line.strip("\n").strip("/")
             if line.startswith("||"):
                 output.write(server_template.format(domain=line[2:], relay_dns=relay_dns))
                 output.write(ipset_template.format(domain=line[2:], ipset_name=ipset_name))
